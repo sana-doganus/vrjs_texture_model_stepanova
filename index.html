@@ -13,12 +13,12 @@
         <img id="skyTexture" src="sky.jpg">
       </a-assets>
       
-      <a-sphere position="0 2 -5" rotation="0 0 0" radius="2" src="#sphereTexture">
+      <a-sphere position="0 2 -5" rotation="0 0 0" radius="1.25" src="#sphereTexture">
         <a-animation attribute="position" direction="alternate" dur="2000" repeat="indefinite"
-          to="0 2.2 -5"></a-animation>
+          to="0 2.5 -5"></a-animation>
         <a-animation attribute="rotation" begin="click" dur="2000" to="360 405 45"></a-animation>
-        <a-animation attribute="scale" begin="mouseenter" dur="300" to="2.3 2.3 2.3"></a-animation>
-        <a-animation attribute="scale" begin="mouseleave" dur="300" to="2 2 2"></a-animation>
+        <a-animation attribute="radius" begin="mouseenter" dur="300" to="2"></a-animation>
+        <a-animation attribute="radius" begin="mouseleave" dur="300" to="1.25"></a-animation>
       </a-sphere>
       
       <a-sky height="2048" radius="30" src="#skyTexture" theta-length="90" width="2048"></a-sky>
@@ -27,6 +27,7 @@
       <a-plane src="#groundTexture" rotation="-90 0 0" height="100" width="100"></a-plane>
       
       <a-camera>
+        <a-cursor color="#FAFAFA"></a-cursor>
       </a-camera>
     </a-scene>
   </body>
